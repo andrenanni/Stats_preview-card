@@ -29,11 +29,13 @@ main{
     max-width: 1100px;
 }
 
-.text{
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 10px 0px 0px 10px;
     background-color: hsl(244, 38%, 16%);
-    width: 100%;
-    max-width: 560px;
+    width: 560px;
     padding: 70px;
 }
 
@@ -50,7 +52,6 @@ main{
 
 .paragraph{
     color: hsla(0, 0%, 100%, 0.6);
-    display: flex;
     font-size: 11pt;
     line-height: 25px;
 }
@@ -66,8 +67,6 @@ main{
 
 .status{
     display: flex;
-    align-items: center;
-    height: 100%;
 }
 
 .number{
@@ -87,4 +86,39 @@ main{
     font-weight: 400;
     font-size: 8.5pt;
     letter-spacing: 2px;
+}
+
+@media (max-width:1099px){
+    .card{
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 1100px;
+    }
+
+    .img{
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .content{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-radius: 0px 0px 15px 15px;
+        background-color: hsl(244, 38%, 16%);
+        width: 654px;
+        padding: 50px;
+    }
+
+    .number{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        line-height: 27px;
+    }
+
+    .text{
+        margin-bottom: 25px;
+    }
 }
